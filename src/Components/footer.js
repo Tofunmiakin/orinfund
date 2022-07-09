@@ -1,5 +1,6 @@
 import { React } from 'react';
 import FooterLogo from '../Assets/FooterLogo.png';
+import { HashLink, NavHashLink } from 'react-router-hash-link';
 
 const Footer = () => {
   return (
@@ -17,18 +18,18 @@ const Footer = () => {
               >
                 Home
               </a>
-              <a
-                href="/#About"
+              <HashLink
+                to="/#About"
                 className="active:text-black active:underline hover:underline"
               >
                 About
-              </a>
-              <a
-                href="/#Product"
+              </HashLink>
+              <HashLink
+                to="/#Product"
                 className="active:text-black active:underline hover:underline"
               >
                 Product
-              </a>
+              </HashLink>
             </div>
             <div className="flex flex-col lg:mt-0 lg:space-x-0 space-y-6">
               <a
@@ -38,7 +39,7 @@ const Footer = () => {
                 Contact
               </a>
               <a
-                href="/contact/#partners"
+                href="/partners"
                 className="active:text-black active:underline hover:underline"
               >
                 Partners
@@ -57,46 +58,44 @@ const Footer = () => {
         </p>
       </div>
 
-      <div className="hidden lg:flex space-x-48 bg-primary mt-5 mx-auto mb-2">
-        <div className="m-2 lg:m-4">
-          <div className="flex space-x-20">
-            <div>
-              <img className="w-1/2" src={FooterLogo} alt="logo" />
-            </div>
-            <div className="my-auto space-x-5">
-              <p className="text-xs lg:text-base text-white ">
-                Contact us at info@orinfund.com
-              </p>
-            </div>
+      <div className="hidden lg:flex space-x-48 bg-primary mt-5 mb-2">
+        <div className="ml-12 justify-self-start">
+          <div>
+            <img className="w-1/4" src={FooterLogo} alt="logo" />
           </div>
-          <p className="text-xs mt-2 text-white">
-            All material published on Orinfund.com is copyrighted (c) 2022
-            <br /> by Digital Music Commerce And Exchange Limited. All rights
-            reserved
-          </p>
+          <div className="flex space-x-20 my-auto">
+            <p className="text-xs  text-white">
+              All material published on Orinfund.com is copyrighted (c) 2022
+              <br /> by Digital Music Commerce And Exchange Limited. All rights
+              reserved
+            </p>
+            <p className="text-xs lg:text-base text-white ">
+              Contact us at info@orinfund.com
+            </p>
+          </div>
         </div>
         <div className="flex flex-row space-x-12 m-5 text-white text-sm my-auto mr-24">
-          <div className="flex flex-col space-x-0 space-y-5">
+          <div className="flex flex-col space-x-0 space-y-8">
             <a
               className="active:text-black active:underline hover:underline"
               href="/"
             >
               Home
             </a>
-            <a
+            <HashLink
               className="active:text-black active:underline hover:underline"
-              href="/#About"
+              to="/#About"
             >
               About
-            </a>
-            <a
+            </HashLink>
+            <HashLink
               className="active:text-black active:underline hover:underline"
-              href="/#Product"
+              to="/#Product"
             >
               Product
-            </a>
+            </HashLink>
           </div>
-          <div className="flex flex-col ml-0 mb-5 mt-0 space-x-0 space-y-5">
+          <div className="flex flex-col ml-0 mb-5 mt-0 space-x-0 space-y-8">
             <a
               className="active:text-black active:underline hover:underline"
               href="/contact"
@@ -105,7 +104,7 @@ const Footer = () => {
             </a>
             <a
               className="active:text-black active:underline hover:underline"
-              href="/contact/#partners"
+              href="/partners"
             >
               Partners
             </a>

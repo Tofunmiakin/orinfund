@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import OrinLogo from '../Assets/OrinLogo.png';
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { HashLink } from 'react-router-hash-link';
 
 const Navigation = () => {
   return (
@@ -29,13 +30,15 @@ const Navigation = () => {
 
                 <div className="hidden lg:flex space-x-16 text-lg my-auto font-normal">
                   <a href="/">Home</a>
-                  <a href="/#About">About</a>
-                  <a href="/#Product">Product</a>
+                  <HashLink to="/#About">About</HashLink>
+                  <HashLink to="/#Product">Product</HashLink>
                 </div>
                 <button className="hidden lg:flex bg-primary text-base text-white font-bold hover:bg-orange-700">
                   <a
                     className="px-8 py-4"
                     href="https://orinfund.chordcash.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Get Funded Now
                   </a>
@@ -77,22 +80,22 @@ const Navigation = () => {
                     </div>
                     <div className="mt-6">
                       <nav className="grid gap-y-8">
-                        <a
-                          href="/#About"
+                        <HashLink
+                          to="/#About"
                           className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                         >
                           <span className="ml-3 text-base font-medium text-gray-900">
                             About
                           </span>
-                        </a>
-                        <a
-                          href="/#Product"
+                        </HashLink>
+                        <HashLink
+                          to="/#Product"
                           className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                         >
                           <span className="ml-3 text-base font-medium text-gray-900">
                             Product
                           </span>
-                        </a>
+                        </HashLink>
                       </nav>
                     </div>
                   </div>
@@ -101,6 +104,8 @@ const Navigation = () => {
                       <a
                         href="https://orinfund.chordcash.com/"
                         className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary hover:bg-orange-700"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         Get Funded Now
                       </a>

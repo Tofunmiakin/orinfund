@@ -82,6 +82,8 @@ const Product = () => {
               <a
                 className=" py-2 w-full flex items-center justify-center text-xl h-24 font-bold px-16 border border-transparent rounded-md shadow-sm text-white bg-primary hover:bg-orange-700"
                 href="https://orinfund.chordcash.com/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Get Funded Now
               </a>
